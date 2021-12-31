@@ -4,7 +4,7 @@
 * [Planed features](#planned-features)
 
 ## General Info 
-This project is ment as a blueprint for a simple singlepage webapplication, which feels like a multipageapplication.
+This project is ment as a blueprint for a simple singlepage webapplication, with the feel of a multipageapplication.
 For the multipageapplication feeling there is a build in router for the frontend, which is really easy to [use](#frontend).
 
 ## Setup
