@@ -88,9 +88,11 @@ document.querySelector("#app").innerHTML = await view.getHtml(); // add the foll
     alert("hello, i am an alert in home")
 ```
 
-## navigation
-```javascript
-npm start
+## Navigation
+If you stick to the layout of the navigation in the header, you can use the build in burger button, which will appear at smaller screen sizes. Use "data-link" like in the examples of the links in router, to prevent the site from reloading
+```html
+<a class="nav-item" href="/" data-link>plugins</a>
+<a class="nav-item" href="/info" data-link>info</a>
 ```
 
 ## Configure Ngnix
