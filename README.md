@@ -31,14 +31,61 @@ The header and the footer of the webpage are static. The only content which will
 * [Javascript for views](#javascript-for-views)
 * [Navigation](#navigation)
 
-## Views
+## Routes
+in /public/index.html specify the links like this
+```html
+<a class="nav-item" href="/" data-link>plugins</a>
+<a class="nav-item" href="/info" data-link>info</a>
+```
+to render a view for the specified routes add the following to "/public/static/index.js" to the router
 ```javascript
-npm start
+const router = async () => {
+  const routes = [
+    { path: "/", view: Home },
+    { path: "/info", view: Info}
+    // { path: "/plugins", view: Plugins }
+    // { path: "/plugins/:id", view: Plugin }
+  ];
+```
+import also the routes in the same file to use them
+```javascript
+// views
+import Home from "./views/Home.js";
+// import Plugins from "./views/Plugins.js";
+// import Plugin from "./views/Plugin.js";
+import Info from "./views/Info.js";
+```
+
+## Views
+To create a view place a new javascript file under "blueprint_webpage/public/static/views/(Home.js)"
+Your View can look like the following:
+```javascript
+import AbstractView from "./AbstractView.js";
+
+export default class extends AbstractView {
+  constructor() {
+    super();
+    this.setTitle("Home"); // set the title in the browser
+  }
+
+  async getHtml() {
+    return `
+      <div>Hello from home</div>
+    `;
+  }
+}
 ```
 
 ## Javascript for views
+When a view gets loaded, you need something like a trigger to use javascript to modify the contents of the view. 
+To do this you can execute for example function after rendering the view.
+Add the following code in "/public/static/index.js" 
 ```javascript
-npm start
+document.querySelector("#app").innerHTML = await view.getHtml(); // add the following after this line
+
+// execute a function depending on the view
+  if (location.pathname === "/") 
+    alert("hello, i am an alert in home")
 ```
 
 ## navigation
