@@ -1,0 +1,23 @@
+{
+  "name": "blueprint_webpage",
+  "version": "0.1.0",
+  "description": "Single Page without framework",
+  "main": "index.js",
+  "scripts": {
+    "run": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mug3n96/blueprint_webpage.git"
+  },
+  "author": "Mug3n96",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mug3n96/blueprint_webpage/issues"
+  },
+  "homepage": "https://github.com/Mug3n96/rust_server#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2"
+  }
+}
