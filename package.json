@@ -4,7 +4,7 @@
   "description": "Single Page without framework",
   "main": "index.js",
   "scripts": {
-    "run": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",

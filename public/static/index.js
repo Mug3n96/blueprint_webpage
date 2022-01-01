@@ -1,7 +1,5 @@
 // views
 import Home from "./views/Home.js";
-import Plugins from "./views/Plugins.js";
-import Plugin from "./views/Plugin.js";
 import Info from "./views/Info.js";
 
 // modules
@@ -31,12 +29,9 @@ const getParams = (match) => {
 const router = async () => {
   const routes = [
     // some examples, how your views can look
-    // { path: "/error", view: () => console.log("404")},
-    // { path: "/", view: Home },
-    // { path: "/plugins", view: Plugins },
-    // { path: "/plugins/:id", view: Plugin },
-    // { path: "/info", view: Info},
-    // { path: "/rules", view: () => console.log("Viewing Rules")},
+    { path: "/error", view: () => console.log("404")},
+    { path: "/", view: Home },
+    { path: "/info", view: Info},
   ];
 
   const potentialMatches = routes.map((route) => {

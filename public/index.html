@@ -4,37 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <!-- add here your fontawesome kit if you like to use fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/6e0b41a7b2.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="/static/styles.css" />
     <title>Document</title>
   </head>
   <body>
     <header class="nav-container" id="main_nav">
       <nav class="nav-items">
+        <!-- an example how your navbar can be implemented -->
         <div class="nav-group">
           <div class="brand-group">
-            <!-- place brand here -->
+            <a class="brand-item__text">My Brand</a>
           </div>
         </div>
-        <!-- an example how your navbar can be implemented
-        <div class="nav-group">
-          <a class="nav-item" href="/" data-link>Home</a>
-        </div>
-        <div class="nav-group">
-          <a class="nav-item" href="/plugins" data-link>plugins</a>
-          <a class="nav-item" href="/rules" data-link>rules</a>
-          <a class="nav-item" href="/info" data-link>info</a>
-        </div>
-        -->
+        <ul class="nav-group">
+          <li><a class="nav-item" href="/" data-link>Home</a></li>
+          <li><a class="nav-item" href="/info" data-link>info</a></li>
+        </ul>
+        <ul class="nav-group">
+          <li>
+            <a class="nav-item nav-item__with-akzent" href="/contact" data-link>Kontakt</a>
+          </li>
+        </ul>
+        <!-- example ends here -->
       </nav>
     </header>
-    <!-- hamburger example
+    <!-- hamburger example -->
     <div class="nav-hamburger fas fa-bars" id="burger_nav"></div>
-    -->
-    
+    <!-- hamburger example ends here -->
+
     <!-- the views will be rendered in <section></section> -->
-    <section id="app" class="app-container">
-    </section>
+    <section id="app" class="app-container"></section>
     <footer class="footer-container">
+      <div>footer</div>
     </footer>
     <script type="module" src="/static/index.js"></script>
   </body>
