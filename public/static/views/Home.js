@@ -11,7 +11,7 @@ export default class extends AbstractView {
     return `
       <article class="article home">
         <header class="article-header__container">
-          <h1 class="article-header__title">I am the Title of Home</h1>
+          <h2 class="article-header__title">I am the title of Home</h2>
         </header>
         <main>
           <p>
