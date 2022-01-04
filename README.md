@@ -96,9 +96,31 @@ If you stick to the layout of the navigation in the header, you can use the buil
 ```
 
 ## Configure Ngnix
-```javascript
-npm start
+install nginx and certbot
+in sites-available create a new file (for example "mysite")
+and point to the file in sites-enabled
+your configuration can look like the following
+```nginx
+server {
+  server_name yourdomain.com www.yourdomain.com;
+
+  location / {
+    proxy_pass http://localhost:3333;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection 'upgrade';
+    proxy_set_header Host $host;
+    proxy_cache_bypass $http_upgrade;
+  }
 ```
+replace "yourdomain.com" and "www.yourdomain.com" with your domain names.
+add a "A" record in your DNS settings of your Domainprovider and enter the IP-Address of your server.
+
+cerbot will automatically sign your ssl certificate. To do so enter the following into your console:
+```
+certbot --nginx
+```
+enter the number of your domains which you will sign. Cerbot will add the necessery lines into your sites-available config.
 
 ## Planed for the future
 * Webpack integration
